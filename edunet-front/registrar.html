@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="set/css/signLogin.css">
+</head>
+
+<body style="background-color: #c4dee643;">
+    <div class="menu">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid" style="background-image: url(set/images/bg_menu.png);">
+                <a class="navbar-brand" href="index.html">
+                    <img src="set/images/icon.png" alt="Logo" width="40">
+                    EduNet
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Explorar
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="psicologia.html">Psicología</a></li>
+                                <li><a class="dropdown-item" href="basica.html">Educación Básica</a></li>
+                                <li><a class="dropdown-item" href="ingenieria.html">Ingeniería de Software</a></li>
+                                <li><a class="dropdown-item" href="negocios.html">Negocios Internacionales</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Comunidad
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Foro</a></li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contáctanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="registrar.html">Crear cuenta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="login.html">Iniciar sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div id="izq"></div>
+        <div class="form" style="background-color: white;">
+            <div class="alert alert-primary" role="alert" id="alertSuccess">
+                Registrado de manera exitosa!
+            </div>
+            <div class="alert alert-warning" role="alert" id="alertError">
+                Error al registrar. Revise los datos!
+            </div>
+            <div style="border-bottom-style: dotted; border-color: darkgrey; background-color: rgb(184, 215, 211); font-size: large;">Elija el rol a desempeñar: </div>
+            <br>
+            <a class="btn btn-success" data-bs-toggle="collapse" href="#studentForm" role="button" aria-expanded="false" aria-controls="studentForm">
+                Estudiante
+              </a>
+            <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#teacherForm"
+                aria-expanded="false" aria-controls="teacherForm">
+                Profesor
+            </button>
+            <div id="studentForm" class="collapse multi-collapse">
+                <br />
+                <form id="signInForm" class="formStudent" method="post">
+                    <h2 id="title">Registrarse</h2>
+                    <br>
+                    <div style="padding-left: 50px; padding-right: 50px;">
+                        <div class="form-group">
+                            <label for="studentUser">Usuario: </label>
+                            <input id="studentUser" class="form-control" name="studentUser" type="text"
+                                style="text-align: center;" />
+                        </div>
+                        <div class="form-group">
+                            <label for="studentPsw">Contraseña</label>
+                            <input type="password" name="studentPsw" id="studentPsw" class="form-control"
+                                style="text-align: center;"  />
+                        </div>
+                        <div class="form-group">
+                            <label for="studentName">Nombre: </label>
+                            <input id="studentName" class="form-control" name="studentName" type="text"
+                                style="text-align: center;"  />
+                        </div>
+                        <div class="form-group">
+                            <label for="studentLastName">Apellido: </label>
+                            <input id="studentLastName" class="form-control" name="studentLastName" type="text"
+                                style="text-align: center; "  />
+                        </div>
+                        <div class="form-group">
+                            <label for="studentEmail">Correo: </label>
+                            <input id="studentEmail" class="form-control" " name=" studentEmail" type="text"
+                                style="text-align: center;"  />
+                        </div>
+                        <div class="form-group">
+                            <label for="studentBirth">Fecha de nacimiento: </label>
+                            <input id="studentBirth" class="form-control" name="studentBirth" type="text"
+                                placeholder="yyyy-mm-dd" style="text-align: center;" />
+                        </div>
+                        <br />
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <div id="teacherForm" class="collapse multi-collapse">
+                <br />
+                <form id="signInFormTeacher" class="formTeacher" method="post">
+                    <h2 id="title">Registrarse</h2>
+                    <br />
+                    <div style="padding-left: 50px; padding-right: 50px;">
+                        <div class="form-group">
+                            <label for="teacherUser">Usuario: </label>
+                            <input id="teacherUser" class="form-control" name="teacherUser" type="text"
+                                style="text-align: center;" />
+                        </div>
+                        <div class="form-group">
+                            <label for="teacherPsw">Contraseña</label>
+                            <input type="password" name="teacherPsw" id="teacherPsw" class="form-control"
+                                style="text-align: center;" />
+                        </div>
+                        <div class="form-group">
+                            <label for="teacherName">Nombre: </label>
+                            <input id="teacherName" class="form-control" name="teacherName" type="text"
+                                style="text-align: center;" />
+                        </div>
+                        <div class="form-group">
+                            <label for="teacherLastName">Apellido: </label>
+                            <input id="teacherLastName" class="form-control" name="teacherLastName" type="text"
+                                style="text-align: center; "/>
+                        </div>
+                        <div class="form-group">
+                            <label for="teacherEmail">Correo: </label>
+                            <input id="teacherEmail" class="form-control" " name=" teacherEmail" type="text"
+                                style="text-align: center;" />
+                        </div>
+                        <div class="form-group">
+                            <label for="teacherBirth">Fecha de nacimiento: </label>
+                            <input id="teacherBirth" class="form-control" name="teacherBirth" type="text"
+                                placeholder="yyyy-mm-dd" style="text-align: center;" />
+                        </div>
+                        <div class="form-group">
+                            <label for="teacherSpeciality">Especialidad: </label>
+                            <input id="teacherSpeciality" class="form-control" name="teacherSpeciality" type="text"
+                                style="text-align: center;" />
+                        </div>
+                        <br />
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="der"></div>
+    </div>
+    <script src="set/java/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script src="set/java/signInStudent.js">
+    </script>
+    <script src="set/java/signInTeacher.js">
+    </script>
+</body>
+
+</html>

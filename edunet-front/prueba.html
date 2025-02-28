@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Texto</title>
+    <!-- Agrega la referencia a jQuery -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+</head>
+<body>
+    <div id="contenido">
+        <p>Este es un fragmento de texto. Puedes mostrar todo el texto haciendo clic en el botón.
+            Este es un fragmento de texto. Puedes mostrar todo el texto haciendo clic en el botón.
+            Este es un fragmento de texto. Puedes mostrar todo el texto haciendo clic en el botón.
+            Este es un fragmento de texto. Puedes mostrar todo el texto haciendo clic en el botón.
+            Este es un fragmento de texto. Puedes mostrar todo el texto haciendo clic en el botón.
+            Este es un fragmento de texto. Puedes mostrar todo el texto haciendo clic en el botón.
+            Este es un fragmento de texto. Puedes mostrar todo el texto haciendo clic en el botón.
+            Este es un fragmento de texto. Puedes mostrar todo el texto haciendo clic en el botón.
+        </p>
+    </div>
+    <!-- Agrega un botón con un ID para identificarlo en jQuery -->
+    <button id="mostrarTexto">Mostrar Todo</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function showContent() {
+            $("#contenido").show();
+        }
+        $("#mostrarTexto").click(function () {
+            showContent();
+        });
+    </script>
+</body>
+</html>
